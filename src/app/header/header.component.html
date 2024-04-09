@@ -1,3 +1,10 @@
-<ion-header>
-  <ion-toggle [ngModel]="radioDarkMode" (ionChange)="toggleDarkMode()"> Dark </ion-toggle>
-</ion-header>
+
+<ion-content>
+  <ion-list [inset]="true">
+    <ion-item>
+      <ion-toggle [(ngModel)]="radioDarkMode" (ionChange)="toggleDarkMode()" justify="space-between">
+        Dark Mode
+      </ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

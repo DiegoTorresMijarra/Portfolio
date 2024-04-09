@@ -25,8 +25,6 @@ export class HeaderComponent implements OnInit {
   }
 
   protected toggleDarkMode(): void {
-    console.log('toggleDarkMode')
     document.body.classList.toggle('dark');
   }
-
 }
