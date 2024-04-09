@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {IonicModule, IonRadio, IonToggle} from "@ionic/angular";
-import {FormBuilder, FormsModule} from "@angular/forms";
-import {subscribeOn} from "rxjs";
+import {IonicModule} from "@ionic/angular";
+import { FormsModule } from "@angular/forms";
+import { addIcons } from 'ionicons';
+import { contrast, contrastOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-header',
@@ -13,18 +14,25 @@ import {subscribeOn} from "rxjs";
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
+
 export class HeaderComponent implements OnInit {
-  radioDarkMode= false;
+  darkMode= false;
+  iconDarkMode = document.getElementById('iconDarkMode');
+
   ngOnInit(): void {
-    this.radioDarkMode =  window.matchMedia('(prefers-color-scheme: dark)').matches;
-    this.setDefaultMode()
+    addIcons({contrast})
+    addIcons({contrastOutline})
+
+    this.darkMode =  window.matchMedia('(prefers-color-scheme: dark)').matches;
+    this.setMode()
   }
 
-  protected setDefaultMode() {
-    if(this.radioDarkMode) document.body.classList.add('dark');
+  protected setMode() {
+    document.body.classList.toggle('dark');
   }
 
   protected toggleDarkMode(): void {
-    document.body.classList.toggle('dark');
+    this.darkMode =!this.darkMode;
+    this.setMode()
   }
 }

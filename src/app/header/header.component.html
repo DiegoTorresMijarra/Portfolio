@@ -1,10 +1,17 @@
+<ion-header>
+  <ion-item>
 
-<ion-content>
-  <ion-list [inset]="true">
-    <ion-item>
-      <ion-toggle [(ngModel)]="radioDarkMode" (ionChange)="toggleDarkMode()" justify="space-between">
-        Dark Mode
-      </ion-toggle>
-    </ion-item>
-  </ion-list>
-</ion-content>
+  </ion-item>
+
+  <ion-item>
+    <ion-header>
+      Diego Torres Mijarra
+    </ion-header>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="toggleDarkMode()">
+      <ion-icon id="iconDarkMode" slot="icon-only" [name]="darkMode ? 'contrast' : 'contrast-Outline'"></ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-header>

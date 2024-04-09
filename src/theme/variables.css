@@ -78,6 +78,20 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** headder **/
+  --ion-color-header: #222428;
+  --ion-color-header-rgb: 34, 36, 40;
+  --ion-color-header-contrast: #ffffff;
+  --ion-color-header-contrast-rgb: 255, 255, 255;
+  --ion-color-header-shade: #1e2023;
+  --ion-color-header-tint: #383a3e;
+
+  /** footer **/
+  --ion-color-footer: #222428;
+  --ion-color-footer-rgb: 34, 36, 40;
+  --ion-color-footer-contrast: #ffffff;
+  --ion-color-footer-contrast-rgb: 255, 255, 255;
 }
 
 /*
@@ -94,7 +108,7 @@
 
 /* This sets a different background and item background in light mode on md */
 .md body {
-  --ion-background-color: #f9f9f9;
+  --ion-background-color: #9cb1da;
   --ion-toolbar-background: var(--ion-background-color);
   --ion-item-background: #fff;
 }
