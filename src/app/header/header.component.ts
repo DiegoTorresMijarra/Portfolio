@@ -27,12 +27,12 @@ export class HeaderComponent implements OnInit {
     this.setMode()
   }
 
-  protected setMode() {
-    document.body.classList.toggle('dark');
-  }
-
   protected toggleDarkMode(): void {
     this.darkMode =!this.darkMode;
     this.setMode()
+  }
+
+  protected setMode() {
+    document.body.classList.toggle('dark');
   }
 }
