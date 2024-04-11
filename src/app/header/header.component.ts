@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {IonicModule} from "@ionic/angular";
 import { FormsModule } from "@angular/forms";
 import { addIcons } from 'ionicons';
@@ -17,13 +17,13 @@ import { contrast, contrastOutline } from 'ionicons/icons';
 
 export class HeaderComponent implements OnInit {
   darkMode= false;
-  iconDarkMode = document.getElementById('iconDarkMode');
+  @Input() onCharge : boolean = false;
 
   ngOnInit(): void {
     addIcons({contrast})
     addIcons({contrastOutline})
 
-    this.darkMode =  window.matchMedia('(prefers-color-scheme: dark)').matches;
+    this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     this.setMode()
   }
 
