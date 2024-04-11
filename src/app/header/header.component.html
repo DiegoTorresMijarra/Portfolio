@@ -1,17 +1,24 @@
-<ion-header>
-  <ion-item>
-
-  </ion-item>
-
-  <ion-item>
-    <ion-header>
-      Diego Torres Mijarra
-    </ion-header>
-  </ion-item>
-  <ion-item>
-    <ion-button (click)="toggleDarkMode()" color="medium">
-      <ion-icon id="iconDarkMode" slot="icon-only" name="contrast-outline" color="dark"></ion-icon>
-    </ion-button>
-  </ion-item>
-
-</ion-header>
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Leyenda:</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar class="ion-align-items-center">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center">
+        titulo
+      </ion-title>
+      <ion-button (click)="toggleDarkMode()" color="medium" slot="end">
+        <ion-icon id="iconDarkMode" slot="icon-only" name="contrast-outline" color="dark"></ion-icon>
+      </ion-button>
+      <ion-progress-bar type="disabled"></ion-progress-bar>
+    </ion-toolbar>
+  </ion-header>
+</div>
