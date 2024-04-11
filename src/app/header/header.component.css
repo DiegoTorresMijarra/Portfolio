@@ -1,6 +1,14 @@
-ion-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+.icon-col {
+  display: flex !important;
+  flex-direction: column-reverse;
+}
+.title {
+  margin: initial !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center  !important;
+}
+ion-img::part(image){
+  height: 50px;
+  border-radius: 50%;
 }
