@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {IonicModule} from "@ionic/angular";
+import {delay} from "rxjs";
 
 @Component({
   selector: 'app-content-header',
@@ -14,6 +15,5 @@ export class ContentHeaderComponent  implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
-
+  ngOnInit() {  }
 }
