@@ -1,0 +1,12 @@
+.badget {
+  height: 2em;
+  margin: 3px;
+}
+
+ion-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
