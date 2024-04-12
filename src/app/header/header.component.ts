@@ -3,21 +3,25 @@ import {IonicModule} from "@ionic/angular";
 import { FormsModule } from "@angular/forms";
 import { addIcons } from 'ionicons';
 import { contrast, contrastOutline } from 'ionicons/icons';
+import {AppComponent} from "../app.component";
+import {subscribeOn} from "rxjs";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
     IonicModule,
-    FormsModule
+    FormsModule,
+    NgIf,
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
 })
 
 export class HeaderComponent implements OnInit {
   darkMode= false;
-  @Input() onCharge : boolean = false;
+  @Input() loaded : boolean = false;
 
   ngOnInit(): void {
     addIcons({contrast})

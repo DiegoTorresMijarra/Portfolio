@@ -31,7 +31,7 @@
         <ion-icon id="iconDarkMode" slot="icon-only" name="contrast-outline" color="dark"></ion-icon>
       </ion-button>
 
-      <ion-progress-bar type="disabled"></ion-progress-bar>
+      <ion-progress-bar type="indeterminate" *ngIf="!loaded"></ion-progress-bar>
 
     </ion-toolbar>
   </ion-header>
