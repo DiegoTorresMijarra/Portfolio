@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {ContentHeaderComponent} from "../content-header/content-header.component";
-import {IonicModule} from "@ionic/angular";
+import {IonContent, IonicModule} from "@ionic/angular";
 import {ContentComponent} from "../content/content.component";
+import {AppComponent} from "../app.component";
 
 @Component({
   selector: 'app-body',
@@ -15,5 +16,12 @@ import {ContentComponent} from "../content/content.component";
   styleUrl: './body.component.css'
 })
 export class BodyComponent {
+//  @ViewChild(AppComponent) body: IonContent;
 
+  constructor() {
+  }
+
+  scrollTo(){
+//    this.body?.scrollToTop().then(r => true);
+  }
 }
