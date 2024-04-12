@@ -22,6 +22,6 @@ export class AppComponent implements AfterContentInit{
 
    ngAfterContentInit(): void {
     //this.delay(2000).then(r => this.loaded = true)
-    this.loaded = true
+    this.loaded = true // todo no funciona bien
   }
 }
