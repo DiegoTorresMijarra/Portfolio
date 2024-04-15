@@ -1,23 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import {AnimationController, IonicModule} from "@ionic/angular";
+import {TechBadgeComponent} from "../tech-badge/tech-badge.component";
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css'],
   imports: [
-    IonicModule
+    IonicModule,
+    TechBadgeComponent
   ],
   standalone: true
 })
 
-export class ContentComponent implements OnInit {
+export class ContentComponent{
 
   constructor(private animationCtrl: AnimationController) {
-  }
-
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
   enterAnimation = (baseEl: HTMLElement) => {
