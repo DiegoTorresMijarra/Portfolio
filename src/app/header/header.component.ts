@@ -2,17 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import {IonicModule} from "@ionic/angular";
 import {FormsModule} from "@angular/forms";
 import {addIcons} from 'ionicons';
-import {
-  contrast,
-  contrastOutline,
-  schoolOutline,
-  copyOutline,
-  sendOutline,
-  mailOutline,
-  logoGithub,
-  arrowRedoOutline,
-  logoLinkedin
-} from 'ionicons/icons';
 import {NgIf} from "@angular/common";
 
 @Component({
@@ -32,9 +21,6 @@ export class HeaderComponent implements OnInit {
   @Input() loaded: boolean = false;
 
   ngOnInit(): void {
-    addIcons({contrast, contrastOutline, schoolOutline, copyOutline,
-      sendOutline, mailOutline, logoGithub, arrowRedoOutline, logoLinkedin})
-
     this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     this.setMode()
   }
