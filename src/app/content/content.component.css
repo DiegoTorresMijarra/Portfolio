@@ -120,10 +120,19 @@
     color: var(--ion-color-step-300);
   }
 
+  .contactItemGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
   .contactItem {
+    margin-top: var(--margin-top);
     display: flex;
     flex-wrap: wrap;
     --background: var(--ion-color-danger-tint);
+    min-width: fit-content;
   }
 
   .contactItem::part(native) {
@@ -165,5 +174,10 @@
   .muestra {
     width: 100%;
     margin: auto;
+  }
+
+  .contactItem {
+    width: 100%;
+    margin-left: 0;
   }
 }
