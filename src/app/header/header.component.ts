@@ -1,10 +1,18 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IonicModule} from "@ionic/angular";
-import { FormsModule } from "@angular/forms";
-import { addIcons } from 'ionicons';
-import {contrast, contrastOutline, schoolOutline} from 'ionicons/icons';
-import {AppComponent} from "../app.component";
-import {subscribeOn} from "rxjs";
+import {FormsModule} from "@angular/forms";
+import {addIcons} from 'ionicons';
+import {
+  contrast,
+  contrastOutline,
+  schoolOutline,
+  copyOutline,
+  sendOutline,
+  mailOutline,
+  logoGithub,
+  arrowRedoOutline,
+  logoLinkedin
+} from 'ionicons/icons';
 import {NgIf} from "@angular/common";
 
 @Component({
@@ -20,20 +28,19 @@ import {NgIf} from "@angular/common";
 })
 
 export class HeaderComponent implements OnInit {
-  darkMode= false;
-  @Input() loaded : boolean = false;
+  darkMode = false;
+  @Input() loaded: boolean = false;
 
   ngOnInit(): void {
-    addIcons({contrast})
-    addIcons({contrastOutline})
-    addIcons({schoolOutline})
+    addIcons({contrast, contrastOutline, schoolOutline, copyOutline,
+      sendOutline, mailOutline, logoGithub, arrowRedoOutline, logoLinkedin})
 
     this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     this.setMode()
   }
 
   protected toggleDarkMode(): void {
-    this.darkMode =!this.darkMode;
+    this.darkMode = !this.darkMode;
     this.setMode()
   }
 

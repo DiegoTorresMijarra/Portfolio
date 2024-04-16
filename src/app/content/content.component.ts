@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AnimationController, IonicModule} from "@ionic/angular";
 import {TechBadgeComponent} from "../tech-badge/tech-badge.component";
+import { Clipboard } from '@capacitor/clipboard';
 
 @Component({
   selector: 'app-content',
@@ -44,5 +45,11 @@ export class ContentComponent{
 
   leaveAnimation = (baseEl: HTMLElement) => {
     return this.enterAnimation(baseEl).direction('reverse');
+  };
+
+  async writeToClipboard (value: string) {
+    await Clipboard.write({
+      string: value,
+    });
   };
 }
