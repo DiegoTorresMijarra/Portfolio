@@ -1,7 +1,17 @@
 <ion-app>
-  <app-header></app-header>
-  <app-body></app-body>
-  <app-footer></app-footer>
+
+  <ion-header>
+    <app-header [loaded]="loaded"></app-header>
+  </ion-header>
+
+  <ion-content>
+    <app-body></app-body>
+  </ion-content>
+
+  <ion-footer>
+    <app-footer></app-footer>
+  </ion-footer>
+
 </ion-app>
 
 <router-outlet />
