@@ -1,5 +1,10 @@
 {
-  "name": "Portfolio",
-  "integrations": {},
-  "type": "angular-standalone"
+  "defaultProject": "Portafolio",
+  "projects": {
+    "Portafolio": {
+      "name": "Portafolio",
+      "integrations": {},
+      "type": "angular-standalone"
+    }
+  }
 }
